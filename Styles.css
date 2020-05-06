@@ -1,0 +1,33 @@
+
+.Header{
+    margin-top: 100px;
+    color: cornflowerblue;
+}
+.Options{
+
+   background-color: #222222;
+   text-align:center
+}
+p{
+    color: darkgray;
+    font-size: 15pt;
+}
+h2 {
+	color: #AAAAAA;
+}
+td {
+  
+  border: 1px solid greenyellow;
+  border-collapse: collapse;
+  color: greenyellow;
+  text-align: center;
+  position:relative;
+  float:none
+  
+}
+table{
+  border: 1px solid greenyellow;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+

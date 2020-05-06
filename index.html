@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="Styles.css"/>
+    <link rel="stylesheet" href="bulma.css"/>
+    <title>Sudoko Solver</title>
+
+  </head>
+  <body class="Options" onload="DrawPad()">
+      <div class="row" style="height:200px;margin-bottom:200px;">
+       <div class="col-md-12">
+           <h1 class="Usefont Header" style="font-size:30pt;">Solve Sudoko By Omid Davar</h1>
+           <p class="UseFont " style="margin-bottom: 100px;">This Code Will Find An Optimal Soloution for Sudoku 9x9 problem : You Can Put Initial State In DATA.txt File .Enjoy:)</p>
+       </div>
+   </div>
+
+   <div class="row">
+       <div class="col-md-3"></div>
+       <div class="col-md-6" style="text-align:center">
+           <div style="text-align:center">
+         <div class="Sudokupad" >
+            <table id="Pad">
+                <tr id="row0">
+                  <td id="col00"></td>
+                  <td id="col01"></td>
+                  <td id="col02" class="rightbold"></td>
+                  <td id="col03"></td>
+                  <td id="col04"></td>
+                  <td id="col05"  class="rightbold"></td>
+                  <td id="col06"></td>
+                  <td id="col07"></td>
+                  <td id="col08"></td>
+                </tr> 
+                 <tr id="row1">
+                  <td id="col10"></td>
+                  <td id="col11"></td>
+                  <td id="col12" class="rightbold"></td>
+                  <td id="col13"></td>
+                  <td id="col14"></td>
+                  <td id="col15" class="rightbold"></td>
+                  <td id="col16"></td>
+                  <td id="col17"></td>
+                  <td id="col18"></td>
+                </tr> 
+                 <tr id="row2" class="bold">
+                  <td id="col20"></td>
+                  <td id="col21"></td>
+                  <td id="col22" class="rightbold"></td>
+                  <td id="col23"></td>
+                  <td id="col24"></td>
+                  <td id="col25" class="rightbold"></td>
+                  <td id="col26"></td>
+                  <td id="col27"></td>
+                  <td id="col28"></td>
+                </tr> 
+                 <tr id="row3">
+                  <td id="col30"></td>
+                  <td id="col31"></td>
+                  <td id="col32" class="rightbold"></td>
+                  <td id="col33"></td>
+                  <td id="col34"></td>
+                  <td id="col35" class="rightbold"></td>
+                  <td id="col36"></td>
+                  <td id="col37"></td>
+                  <td id="col38"></td>
+                </tr> 
+                 <tr id="row4">
+                  <td id="col40"></td>
+                  <td id="col41"></td>
+                  <td id="col42" class="rightbold"></td>
+                  <td id="col43"></td>
+                  <td id="col44"></td>
+                  <td id="col45" class="rightbold"></td>
+                  <td id="col46"></td>
+                  <td id="col47"></td>
+                  <td id="col48"></td>
+                </tr> 
+                 <tr id="row5" class="bold">
+                  <td id="col50"></td>
+                  <td id="col51"></td>
+                  <td id="col52" class="rightbold"></td>
+                  <td id="col53"></td>
+                  <td id="col54"></td>
+                  <td id="col55" class="rightbold"></td>
+                  <td id="col56"></td>
+                  <td id="col57"></td>
+                  <td id="col58"></td>
+                </tr> 
+                 <tr id="row6">
+                  <td id="col60"></td>
+                  <td id="col61"></td>
+                  <td id="col62" class="rightbold"></td>
+                  <td id="col63"></td>
+                  <td id="col64"></td>
+                  <td id="col65" class="rightbold"></td>
+                  <td id="col66"></td>
+                  <td id="col67"></td>
+                  <td id="col68"></td>
+                </tr> 
+                 <tr id="row7">
+                  <td id="col70"></td>
+                  <td id="col71"></td>
+                  <td id="col72" class="rightbold"></td>
+                  <td id="col73"></td>
+                  <td id="col74"></td>
+                  <td id="col75" class="rightbold"></td>
+                  <td id="col76"></td>
+                  <td id="col77"></td>
+                  <td id="col78"></td>
+                </tr> 
+                 <tr id="row8">
+                  <td id="col80"></td>
+                  <td id="col81"></td>
+                  <td id="col82" class="rightbold"></td>
+                  <td id="col83"></td>
+                  <td id="col84"></td>
+                  <td id="col85" class="rightbold"></td>
+                  <td id="col86"></td>
+                  <td id="col87"></td>
+                  <td id="col88"></td>
+                </tr> 
+            </table>
+         </div>
+       <div class="answer" ></div>
+            <a onclick="FindAnswer();" class="button is-success" style="margin-bottom:50px;">Solve</a>
+       </div>
+</div>
+<div class="col-md-3"><div/>
+</div>
+      <script src="bootstrap.js"></script>
+      <script src="SudokoSolve.js"></script>
+       <script src="main.js"></script>
+       <script src="GlobalVariables.js"></script>
+       <script src="Types.js"></script>
+       <script src="Initializing.js"></script>
+  </body>
